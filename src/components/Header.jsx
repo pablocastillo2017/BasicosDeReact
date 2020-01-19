@@ -4,7 +4,6 @@ import React from 'react';
 // se debe colocar entre {}
 
 function Header() {
-
     // JSX
     /*
     const edad = 18;
