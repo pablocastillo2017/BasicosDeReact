@@ -21,6 +21,11 @@ function App() {
   ]);
 
 
+  // State para un carrito de compras
+
+  const [carrito, agregarProducto] = useState([])
+
+
   // Obtener Fecha
   const fecha = new Date().getUTCFullYear();
 
@@ -43,6 +48,9 @@ function App() {
 
             key={producto.id}
             producto={producto}
+            productos={productos}
+            carrito={carrito}
+            agregarProducto={agregarProducto}
           />
 
         ))}
