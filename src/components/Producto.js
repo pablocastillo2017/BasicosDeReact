@@ -8,7 +8,12 @@ const Producto = ({producto ,carrito ,agregarProducto ,productos}) => {
 
     const seleccionarProducto = id =>{
         const producto = productos.filter(producto => producto.id === id );
-        console.log(producto[0]); 
+        agregarProducto([
+            // (...) Spread Operator Clona o Copia el Arreglo completo de los productos que existan en el carrito
+            // para no perder los elementos que ya estan en el carrito
+            ...carrito,
+            ...producto
+        ]);
     }
 
     return ( 
